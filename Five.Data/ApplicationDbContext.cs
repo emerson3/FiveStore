@@ -6,5 +6,8 @@ namespace Five.Data
         {
 
         }
+
+        public DbSet<Usuario> Usuarios { get; set; }
     }
+     
 }

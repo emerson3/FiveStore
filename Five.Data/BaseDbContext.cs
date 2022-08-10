@@ -13,7 +13,7 @@ namespace Five.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(_appSettings.ConnectionString.Default, options =>
+            optionsBuilder.UseNpgsql(_appSettings.ConnectionString.Default, options =>
             {
                 options.MaxBatchSize(100);
                 options.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);

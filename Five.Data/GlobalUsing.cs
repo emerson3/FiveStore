@@ -1,3 +1,9 @@
 global using System.Reflection;
 global using Five.Core.settings;
 global using Microsoft.EntityFrameworkCore;
+global using Five.Core.Models;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Five.Core.Interfaces;
+global using Microsoft.EntityFrameworkCore.Storage;
+global using Five.Core.Interfaces.Base;
+global using Five.Data.Repositories.Base;
