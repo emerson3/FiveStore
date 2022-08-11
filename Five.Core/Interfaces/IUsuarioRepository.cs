@@ -2,6 +2,7 @@ namespace Five.Core.Interfaces
 {
     public interface IUsuarioRepository
     {
-        Task<Usuario> BuscarUsuarioPorEmail(string email);
+        Task<Usuario> BuscarUsuarioPorEmailAsync(string email);
+        Task<IEnumerable<Item>> BuscarItemAsync();
     }
 }

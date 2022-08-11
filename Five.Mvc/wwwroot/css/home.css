@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #DBE6E8;
+}
+
+.conteudo {
+    margin-top: 40px;
+}
+
+.conteudo-roupa {
+    margin-top: 5%;
+}
+
+.conteudo-topo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.logo img {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin-top: -10px;
+}
+
+.menu-esquerda {
+    width: 20vw;
+    height: 2.3vw;
+    border: none;
+    border-radius: 10px;
+    background: radial-gradient(132.21% 3054.42% at 14.77% 48.39%, #557EE6 0%, #60D1E0 100%);
+    box-shadow: 1px 4px 7px #97A6CB;
+    border-radius: 10px;
+}
+
+.menu-esquerda h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    color: #FFFF;
+    padding-left: 10%;
+}
+
+.menu-direita {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 30vw;
+}
+
+.menu-direita-carrinho img {
+    padding-top: 1%;
+    padding-left: 1%;
+    width: 50px;
+    height: 50px;
+}
+
+.menu-direita-favoritos img {
+    padding-top: 15%;
+    width: 30px;
+    height: 30px;
+
+}
+
+.pesquisa {
+    text-align: center;
+}
+
+.pesquisa input {
+    width: 600px;
+    height: 30px;
+    background: #ECEBEB;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-image: url("https://cdn-icons.flaticon.com/png/512/2319/premium/2319177.png?token=exp=1660190474~hmac=48230dd3bb4e99dc21cce4f5487c1f9e");
+    background-repeat: no-repeat;
+    background-position: 570px;
+    background-size: 1.3em;
+}
+
+.pesquisa input::placeholder {
+    padding-left: 5%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #919191;
+}
+
+.menu-direita-favoritos {
+    text-align: center;
+    width: 60px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: radial-gradient(67.8% 67.8% at 64.41% 49.15%, #557EE6 0%, #60D1E0 100%);
+    margin-right: 20px;
+
+}
+
+.menu-direita-carrinho {
+    width: 500px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background: radial-gradient(125.93% 2711.86% at 78.79% 64.84%, #60D1E0 0%, #557EE6 100%);
+}
+
+.conteudo-informacao-roupa img {
+    width: 30px;
+    height: 30px;
+    padding-left: 3%;
+}
+
+.conteudo-informacao-roupa {
+    width: 500px;
+    height: 400px;
+    background: radial-gradient(76.25% 76.25% at 78.54% 80.84%, #60D1E0 0%, #557EE6 100%);
+    border-radius: 9px;
+}
+
+.conteudo-informacao-roupa .titulo-roupa {
+    padding-top: 13%;
+    padding-left: 3%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    color: #0A0A0A;
+}
+
+.conteudo-informacao-roupa h3 {
+    padding-left: 3%;
+    color: #ECEBEB;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.conteudo-imagem-roupa img {
+    width: 360px;
+    height: 360px;
+    transform: rotateY(180deg);
+}
+
+.conteudo-imagem-roupa {
+    padding-left: 250px;
+    margin-top: -110px;
+    filter: drop-shadow(5px 4px 4px rgba(0, 0, 0, 0.25));
+}

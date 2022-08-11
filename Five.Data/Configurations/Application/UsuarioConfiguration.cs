@@ -7,7 +7,6 @@ namespace Five.Data.Configurations.Application
             builder.ToTable("usuario");
 
             builder.HasKey(property => property.Id).HasName("pk_usuario");
-            builder.HasIndex(x => x.Email, "unq_usuario");
 
             builder.Property(x => x.Id).HasColumnName("id").ValueGeneratedOnAdd();
             builder.Property(x => x.Nome).HasColumnName("nome").HasMaxLength(60);

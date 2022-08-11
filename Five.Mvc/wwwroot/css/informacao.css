@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #DBE6E8;
+}
+
+.topo {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.topo .voltar img {
+    width: 40px;
+    height: 40px;
+    margin-top: 12px;
+}
+
+.topo .logo img {
+    width: 200px;
+    height: 100px;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+.botoes-salvar-comprar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-right: 700px;
+}
+
+.wishlist img,
+.carrinho img {
+    width: 30px;
+    height: 30px;
+}
+
+.wishlist img {
+    padding-top: 5px;
+}
+
+.carrinho {
+    margin-top: 20px;
+    width: 350px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background: radial-gradient(125.93% 2711.86% at 78.79% 64.84%, #60D1E0 0%, #557EE6 100%);
+    text-align: center;
+}
+
+.wishlist {
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: radial-gradient(125.93% 2711.86% at 78.79% 64.84%, #60D1E0 0%, #557EE6 100%);
+    text-align: center;
+}
+
+.cor,
+.tamanho {
+    display: flex;
+    flex-direction: row;
+}
+
+.tamanho {
+    margin-top: 20px;
+}
+
+.azul {
+    margin-left: 230px;
+    color: #557EE6;
+}
+
+.branco,
+.vermelho {
+    margin-left: 10px;
+}
+
+.branco {
+    color: #FFFF;
+}
+
+.vermelho {
+    color: tomato;
+}
+
+.pequeno,
+.quantidade,
+.valor {
+    margin-left: 230px;
+}
+
+.quantidade,
+.valor {
+    margin-top: 25px;
+}
+
+.quantidade {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: #656565;
+}
+
+.valor {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 48px;
+    text-decoration-line: underline;
+    color: #557EE6;
+}
+
+.medio,
+.grande {
+    margin-left: 10px;
+}
+
+.fundo-camisa{
+    margin-left: 110vh;
+    margin-top: -350px;
+    width: 46%;
+}
+
+.camisa img {
+    margin-top: -560px;
+    padding-left: 600px;
+}

@@ -17,15 +17,17 @@ public class HomeController : Controller
         _usuarioRepository = usuarioRepository;
     }
 
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(ItemViewModel itemViewModel)
     {
-        var usuarios = await _usuarioRepository.BuscarUsuarioPorEmail("ane.duarte@smn.com.br");
-        Console.WriteLine(usuarios.Nome);
-        return View();
+        var itens = await _usuarioRepository.BuscarItemAsync();
+
+        itemViewModel.itens = itens;
+        return View("Index", itemViewModel);
     }
 
-    public IActionResult Privacy()
+    [HttpGet("informacao-roupa")]
+    public IActionResult InformacaoRoupa()
     {
-        return View();
+        return View("_InformacaoRoupa");
     }
 }

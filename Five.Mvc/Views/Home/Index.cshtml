@@ -1,8 +1,55 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model ItemViewModel
+@{
+    ViewData["Title"] = "Five Store - Home";
+    Layout = null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<link rel="stylesheet" href="~/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="~/css/home.css" />
+
+<div class="conteudo">
+    <div class="conteudo-topo">
+        <div class="menu-esquerda">
+            <h3>Login</h3>
+        </div>
+        <div class="logo">
+            <img src="~/img/fivelogo.png" />
+        </div>
+        <div class="menu-direita">
+            <div class="menu-direita-favoritos">
+                <img src="~/img/heart.png" />
+            </div>
+            <div class="menu-direita-carrinho">
+                <img src="~/img/cart.png" />
+            </div>
+        </div>
+    </div>
+    <div class="pesquisa">
+        <input type="text" name="nome" id="input-pesquisa" placeholder="Procurar">
+    </div>
+    <div class="swiper">
+        <div class="conteudo-roupa swiper-wrapper">
+            @foreach (var item in Model.itens)
+            {
+                <div class="swiper-slide">
+                    <a href="#">
+                        <div class="conteudo-informacao-roupa">
+                            <h4 class="titulo-roupa">@item.Nome</h4>
+                            <h3>@item.Preco</h3>
+                            <img src="~/img/heart.png" />
+                            <div class="conteudo-imagem-roupa">
+                                <img src="~/img/camisa-time.png" />
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/swiper-bundle.min.js"></script>
+    <script src="~/js/site.js"></script>

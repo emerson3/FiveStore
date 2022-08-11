@@ -8,6 +8,7 @@ namespace Five.Data
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Item> Itens { get; set; }
     }
      
 }
