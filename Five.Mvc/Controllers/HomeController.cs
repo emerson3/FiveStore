@@ -1,10 +1,5 @@
-﻿using System.Diagnostics;
-using Five.Core.Interfaces;
-using Microsoft.AspNetCore.Mvc;
-
-namespace Five.Mvc.Controllers;
-
-public class HomeController : Controller
+﻿namespace Five.Mvc.Controllers;
+public class HomeController : AuthenticatedController
 {
     private readonly ILogger<HomeController> _logger;
     private readonly AppSettings _appSettings;

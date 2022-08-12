@@ -10,7 +10,7 @@
 <div class="conteudo">
     <div class="tela-login">
         <div class="box">
-            <form id="form-login" class="form-login" onsubmit="usuario.login()">
+            <form id="form-login" class="form-login" onsubmit="login.login()">
                 <img src="~/img/fivelogo.png" />
                 <div class="form-login-info">
                     <div class="textfield">
@@ -39,3 +39,16 @@
 
     </div>
 </div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/site.js"></script>
+<script src="~/js/pages/login.js"></script>
+<script>
+    login.init({
+        urls: {
+            login: '@Url.Action("Login")',
+            home: '@Url.Action("Index", "Home")'
+        }
+    })
+</script>
