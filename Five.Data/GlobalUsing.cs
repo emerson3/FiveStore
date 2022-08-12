@@ -7,4 +7,3 @@ global using Five.Core.Interfaces;
 global using Microsoft.EntityFrameworkCore.Storage;
 global using Five.Core.Interfaces.Base;
 global using Five.Data.Repositories.Base;
-global using Five.Core.Models;

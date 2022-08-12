@@ -1,0 +1,41 @@
+@{
+    Layout = null;
+    ViewData["Title"] = "Five Store - Login";
+}
+<link rel="stylesheet" href="~/css/login.css" />
+<div class="fundo">
+    <img src="~/img/fundo.png" />
+</div>
+
+<div class="conteudo">
+    <div class="tela-login">
+        <div class="box">
+            <form id="form-login" class="form-login" onsubmit="usuario.login()">
+                <img src="~/img/fivelogo.png" />
+                <div class="form-login-info">
+                    <div class="textfield">
+                        <div class="texto">
+                            <label>Email</label>
+                        </div>
+                        <input text="email" name="email" id="email" />
+                    </div>
+                    <div class="textfield">
+                        <div class="texto">
+                            <label>Senha</label>
+                        </div>
+                        <input text="password" name="senha" id="senha" />
+                    </div>
+                    <div class="button">
+                        <button type="submit">Entrar</button>
+                    </div>
+                    <div class="cadastrar">
+                        <a href="#">
+                            <h5>Cadastre-se</h5>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
