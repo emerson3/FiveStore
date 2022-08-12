@@ -9,7 +9,7 @@ namespace Five.Data.Repositories
             _applicationDbContext = dbContext;
         }
 
-        public async Task<Usuario> BuscarUsuarioPorEmailAsync(string email)
+        public async Task<Usuario> BuscarPorEmailAsync(string email)
         {
             return await _applicationDbContext.Usuarios
                 .AsSingleQuery()

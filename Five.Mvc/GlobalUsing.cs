@@ -3,3 +3,7 @@ global using Five.Core.Helpers;
 global using Five.Data;
 global using Five.Mvc.ViewModels;
 global using Five.Core.Models;
+global using Five.Core.Interfaces;
+global using Microsoft.AspNetCore.Mvc;
+global using Five.Core.Extensions;
+global using Microsoft.AspNetCore.Mvc.Filters;

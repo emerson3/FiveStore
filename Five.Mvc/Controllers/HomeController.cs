@@ -1,9 +1,4 @@
-﻿using System.Diagnostics;
-using Five.Core.Interfaces;
-using Microsoft.AspNetCore.Mvc;
-
-namespace Five.Mvc.Controllers;
-
+﻿namespace Five.Mvc.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
