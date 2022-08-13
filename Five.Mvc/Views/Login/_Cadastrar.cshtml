@@ -1,0 +1,103 @@
+@{
+    Layout = null;
+    ViewData["Title"] = "Five Store - Cadastrar Usuário";
+}
+<link rel="stylesheet" href="~/css/cadastrar.css" />
+<div class="fundo">
+    <img src="~/img/fundo.png" />
+</div>
+
+<div class="conteudo">
+    <div class="tela-cadastrar">
+        <div class="box">
+            <form id="form-cadastrar" class="form-cadastrar" onsubmit="login.cadastrar()">
+                <img src="~/img/fivelogo.png" />
+                <div class="form-cadastrar-info">
+                    <div class="textfield">
+                        <div class="texto">
+                            <label>Nome</label>
+                        </div>
+                        <input type="text" name="nome" id="nome" />
+                    </div>
+                    <div class="textfield">
+                        <div class="texto">
+                            <label>Email</label>
+                        </div>
+                        <input type="email" name="email" id="email" />
+                    </div>
+                    <div class="textfield">
+                        <div class="texto">
+                            <label>Senha</label>
+                        </div>
+                        <input type="password" name="senha" id="senha" />
+                    </div>
+                    <div class="textfield">
+                        <div class="texto">
+                            <label>Rua</label>
+                        </div>
+                        <input type="text" name="rua" id="rua" />
+                    </div>
+                    <div class="textfield">
+                        <div class="texto">
+                            <label>Bairro</label>
+                        </div>
+                        <input type="text" name="bairro" id="bairro" />
+                    </div>
+                    <div class="textfield">
+                        <div class="texto">
+                            <label>Numero</label>
+                        </div>
+                        <input type="text" name="numero" id="numero" />
+                    </div>
+                    <div class="textfield">
+                        <div class="texto">
+                            <label>Cep</label>
+                        </div>
+                        <input type="number" name="cep" id="cep" />
+                    </div>
+                    <div class="textfield">
+                        <div class="texto">
+                            <label>Complemento</label>
+                        </div>
+                        <input type="text" name="complemento" id="complemento" />
+                    </div>
+                    <div class="textfield">
+                        <div class="texto">
+                            <label>Cidade</label>
+                        </div>
+                        <input type="text" name="cidade" id="cidade" />
+                    </div>
+                    <div class="textfield">
+                        <div class="texto">
+                            <label>Estado</label>
+                        </div>
+                        <input type="text" name="estado" id="estado" maxlength="2" />
+                    </div>
+                    <div class="button">
+                        <button type="submit">Cadastrar</button>
+                    </div>
+                    <div class="cadastrar">
+                        <a asp-controller="Login" asp-action="Index">
+                            <h5>Logar</h5>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/site.js"></script>
+<script src="~/js/pages/login.js"></script>
+<script>
+    login.init({
+        urls: {
+            login: '@Url.Action("Index", "Login")',
+            home: '@Url.Action("Index", "Home")',
+            cadastrar: '@Url.Action("CadastrarUsuario", "Login")'
+        }
+    })
+</script>

@@ -1,0 +1,14 @@
+@{
+    Layout = null;
+    var usuarioLogado = @Context.GetSession();
+}
+
+<link rel="stylesheet" type="text/css" href="~/css/Admin.css" />
+
+<div class="conteudo">
+    @if(usuarioLogado.IdTipoUsuario == 1)
+    {
+    <a asp-action="cadastrarFuncionarioView" asp-controller="Admin">Cadastrar Funcionario</a>
+    }
+    <a asp-action="CadastrarItemView", asp-controller="Admin">Cadastrar item</a>
+</div>

@@ -14,11 +14,8 @@ namespace Five.Mvc.Controllers
             {
                 TempData["Nome"] = UsuarioSession.Nome;
                 TempData["Email"] = UsuarioSession.Email;
+                TempData["IdTipoUsuario"] = UsuarioSession.IdTipoUsuario;
             }
-            
-            var user = context.HttpContext.Session.Get<Usuario>("Usuario");
-            if (user == null || user.Id == default)
-                context.Result = new RedirectResult("/login");
         }
     }
 }

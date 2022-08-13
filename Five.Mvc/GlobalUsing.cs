@@ -7,3 +7,6 @@ global using Five.Core.Interfaces;
 global using Microsoft.AspNetCore.Mvc;
 global using Five.Core.Extensions;
 global using Microsoft.AspNetCore.Mvc.Filters;
+global using Five.Data.Repositories;
+global using Five.Core.Interfaces.Base;
+global using Five.Data.Repositories.Base; 

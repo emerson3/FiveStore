@@ -2,7 +2,8 @@ var login = (function () {
     var configs = {
         urls: {
             login: '',
-            home: ''
+            home: '',
+            cadastrar: ''
         }
     };
 
@@ -21,8 +22,20 @@ var login = (function () {
         });
     }
 
+    function cadastrar() {
+        model = $('#form-cadastrar').serializeObject();
+        console.log(model);
+        $.post(configs.urls.cadastrar, model).done(function () {
+            location.href = (configs.urls.login)
+
+        }).fail(function (msg) {
+                site.toast.error(msg);
+        });
+    }
+
     return {
         init: init,
-        login: login
+        login: login,
+        cadastrar: cadastrar
     };
 })();

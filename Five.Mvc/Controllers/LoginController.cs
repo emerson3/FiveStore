@@ -21,10 +21,6 @@ namespace Five.Mvc.Controllers
 
         public IActionResult Index()
         {
-            var session = HttpContext.Session.Get<Usuario>("Usuario");
-            if (session != null)
-                return RedirectToAction("Index", "Home");
-
             return View();
         }
         
@@ -39,6 +35,40 @@ namespace Five.Mvc.Controllers
             HttpContext.Session.Set<Usuario>("Usuario", usuario);
 
             return View("Index", "Home");
+        }
+
+
+        [HttpGet("cadastrar-usuario")]
+        public IActionResult IndexCadastrarUsuario() {
+            return View("_Cadastrar", "Home");
+        }
+
+        [HttpPost("cadastrar-usuario")]
+        public async Task<IActionResult> CadastrarUsuario(CadastrarUsuarioViewModel cadastrarUsuarioViewModel)
+        {
+            if (cadastrarUsuarioViewModel == null)
+                return BadRequest("Nenhum parâmetro foi enviado");
+            var usuario = await _usuarioRepository.BuscarPorEmailAsync(cadastrarUsuarioViewModel.Email);
+
+            if (usuario != null)
+                return BadRequest("Usuário já cadastrado!");
+
+            await _usuarioRepository.CadastrarUsuarioAsync(new Usuario
+            {
+                Nome = cadastrarUsuarioViewModel.Nome,
+                Email = cadastrarUsuarioViewModel.Email,
+                Senha = "111111",
+                IdTipoUsuario = 3,
+                Rua = cadastrarUsuarioViewModel.Rua,
+                Bairro = cadastrarUsuarioViewModel.Bairro,
+                Numero = cadastrarUsuarioViewModel.Numero,
+                Cep = cadastrarUsuarioViewModel.Cep,
+                Complemento = cadastrarUsuarioViewModel.Complemento,
+                Cidade = cadastrarUsuarioViewModel.Cidade,
+                Estado = cadastrarUsuarioViewModel.Estado 
+            });
+
+            return Ok();
         }
     }
 }

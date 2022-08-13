@@ -1,0 +1,78 @@
+@{
+    Layout = null;
+    ViewData["Title"] = "Five Store - Cadastrar Item";
+}
+<link rel="stylesheet" href="~/css/cadastrar.css" />
+<div class="fundo">
+    <img src="~/img/fundo.png" />
+</div>
+
+<div class="conteudo">
+    <div class="tela-cadastrar">
+        <div class="box">
+            <form id="form-item" class="form-cadastrar" onsubmit="admin.cadastrarItem()">
+                <img src="~/img/fivelogo.png" />
+                <div class="form-cadastrar-info">
+                    <div class="textfield">
+                        <div class="texto">
+                            <label>Nome</label>
+                        </div>
+                        <input type="text" name="nome" id="nome" />
+                    </div>
+                    <div class="textfield">
+                        <div class="texto">
+                            <label>Cor</label>
+                        </div>
+                        <div class="cor">
+                            <div class="azul">
+                                <h4>Azul</h4>
+                                <input type="radio" name="cor" id="cor" value="azul">
+                            </div>
+                            <div class="vermelho">
+                                <h4>Vermelho</h4>
+                                <input type="radio" name="cor" id="cor" value="vermelho">
+                            </div>
+                            <div class="branco">
+                                <h4>Branco</h4>
+                                <input type="radio" name="cor" id="cor" value="branco">
+                            </div>
+                        </div>
+                        <div class="textfield">
+                            <div class="texto">
+                                <label>Preço</label>
+                            </div>
+                            <input type="number" name="preco" id="preco" />
+                        </div>
+                        <div class="textfield">
+                            <div class="texto">
+                                <label>Categoria</label>
+                            </div>
+                            Camisa
+                            <input type="radio" name="idCategoria" value="1" />
+                            Calça
+                            <input type="radio" name="idCategoria" value="2" />
+                            Sapato
+                            <input type="radio" name="idCategoria" value="3" />
+                        </div>
+                        <div class="button">
+                            <button type="submit">Cadastrar</button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/site.js"></script>
+<script src="~/js/pages/admin.js"></script>
+<script>
+    admin.init({
+        urls: {
+            cadastrar: '@Url.Action("CadastrarItem", "Admin")',
+            home: '@Url.Action("Index", "Admin")'
+        }
+    })
+</script>

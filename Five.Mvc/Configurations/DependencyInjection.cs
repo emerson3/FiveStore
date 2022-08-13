@@ -1,6 +1,3 @@
-using Five.Core.Interfaces;
-using Five.Data.Repositories;
-
 namespace Five.Mvc.Configurations
 {
     public static class DependencyInjection
@@ -18,7 +15,7 @@ namespace Five.Mvc.Configurations
 
             services.AddScoped<Notification>();
             services.AddScoped<ApplicationDbContext>();
-
+            
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
         }
     }

@@ -2,15 +2,26 @@
 @{
     ViewData["Title"] = "Five Store - Home";
     Layout = null;
+    var usuarioLogado = @Context.GetSession();
 }
 
 <link rel="stylesheet" href="~/css/swiper-bundle.min.css" />
 <link rel="stylesheet" href="~/css/home.css" />
 
 <div class="conteudo">
+    <div class="conteudo-roupa">
     <div class="conteudo-topo">
         <div class="menu-esquerda">
-            <h3>Login</h3>
+            @if(usuarioLogado != null && usuarioLogado.IdTipoUsuario == 3)
+            {
+                <h3>Bem vindo, @TempData["Nome"]</h3>
+            }
+            else if(usuarioLogado != null && usuarioLogado.IdTipoUsuario != 3) {
+                <a asp-controller="Admin" asp-action="Index"><h3>Admin</h3></a>
+            }
+            else {
+            <a asp-controller="Login" asp-action="Index"><h3>Login</h3></a>
+            }
         </div>
         <div class="logo">
             <img src="~/img/fivelogo.png" />
@@ -32,7 +43,7 @@
             @foreach (var item in Model.itens)
             {
                 <div class="swiper-slide">
-                    <a href="#">
+                    <a onclick="admin.informacaoRoupa('@item.Id')">
                         <div class="conteudo-informacao-roupa">
                             <h4 class="titulo-roupa">@item.Nome</h4>
                             <h3>@item.Preco</h3>
@@ -47,9 +58,18 @@
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
+        </div>
     </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/js/swiper-bundle.min.js"></script>
     <script src="~/js/site.js"></script>
+    <script src="~/js/pages/admin.js"></script>
+    <script>
+        admin.init({
+            urls: {
+                informacaoRoupas: '@Url.Action("InformacaoRoupa", "Login")'
+            }
+        })
+    </script>

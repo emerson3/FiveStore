@@ -14,15 +14,21 @@ public class HomeController : AuthenticatedController
 
     public async Task<IActionResult> Index(ItemViewModel itemViewModel)
     {
-        var itens = await _usuarioRepository.BuscarItemAsync();
+        var itens = await _usuarioRepository.ItemAsync();
 
         itemViewModel.itens = itens;
         return View("Index", itemViewModel);
     }
 
     [HttpGet("informacao-roupa")]
-    public IActionResult InformacaoRoupa()
+    public async Task<IActionResult> InformacaoRoupa(int id, ItemViewModel itemViewModel)
     {
-        return View("_InformacaoRoupa");
+        Console.WriteLine(id);
+
+        var item = await _usuarioRepository.BuscarItemAsync(id);
+
+        itemViewModel.item = item;
+
+        return View("_InformacaoRoupa", new { itemViewModel = itemViewModel });
     }
 }
